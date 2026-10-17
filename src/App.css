@@ -180,14 +180,14 @@ button {
   z-index: -1;
 }
 
+
 .hero-image {
-  background-image: url("https://images.unsplash.com/photo-1628487749130-2d41acb1802a?auto=format&fit=crop&w=2200&q=85");
-  background-position: center 48%;
+  background-image: url("https://image.chitra.live/api/v1/wps/f05b081/8754f93c-9571-424e-b9fc-9d9605cf2a79/2/Perseus-Edikan-pit-1074x654.jpg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   transform: scale(1.02);
 }
-
 .hero-shade {
   background:
     linear-gradient(
@@ -448,13 +448,15 @@ button {
   background: #202321;
 }
 
+
 .vision-image {
   min-height: 450px;
-  background-image: url("https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1200&q=80");
+  background-image: url("https://image.chitra.live/api/v1/wps/f05b081/8754f93c-9571-424e-b9fc-9d9605cf2a79/2/Perseus-Edikan-pit-1074x654.jpg");
   background-position: center;
   background-size: cover;
-  filter: saturate(0.75);
+  filter: saturate(0.85);
 }
+
 
 .vision-content {
   display: flex;
@@ -534,10 +536,12 @@ button {
   background-size: cover;
 }
 
+
 .exploration-image {
   background-image: url("/images/exploration.jpg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .development-image {
@@ -1823,8 +1827,19 @@ button {
 
 /* Hero backgrounds */
 
+
+/* FINAL FIX — ABOUT US TOP HERO IMAGE */
 .about-page-hero {
-  background-image: url("https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=2000&q=85");
+  background-image:
+    linear-gradient(
+      rgba(12, 15, 13, 0.30),
+      rgba(12, 15, 13, 0.50)
+    ),
+    url("https://image.chitra.live/api/v1/wps/99cb65a/bb9a2310-cc20-4960-9d94-f358e49c1404/8/Black-Cat-Myhree-Boundarypits-1074x654.jpg") !important;
+
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
 .projects-page-hero {
@@ -3561,5 +3576,197 @@ button {
   .investors-page .investor-info-symbol,
   .investors-page .investor-partnership-mark {
     transition: none;
+  }
+}
+
+
+/* =========================================================
+   GOLDPEAK MINING IMAGE UPGRADE
+   Targeted image changes only.
+   Project-card images and all other styling stay unchanged.
+   ========================================================= */
+
+/* 1. HOME PAGE — Open-pit gold mine */
+.hero-image {
+  background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Geita_open_pit_gold_mine.jpg?width=2200");
+  background-position: center 48%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 2. HOME PAGE — Gold-mining processing facilities */
+.vision-image {
+  background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Tarkwa_processing_5_big.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 3. HOME PAGE — Ghanaian land restoration */
+.sustainability:not(.sustainability-landscape) .sustainability-image {
+  background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Bosomtwe_Land_reclamation_site.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 4. SUSTAINABILITY PAGE — Reclaimed mining land */
+.sustainability-page-hero {
+  background-image:
+    linear-gradient(
+      rgba(12, 15, 13, 0.45),
+      rgba(12, 15, 13, 0.62)
+    ),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Reclamation_Land_Ohio.jpg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 5. SUSTAINABILITY PAGE — Restoration landscape */
+.sustainability-landscape .sustainability-image {
+  background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Greenburn_Mine_reclamation_site%2C_New_Cumnock%2C_East_Ayrshire.jpg?width=1600");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 6. INVESTORS PAGE — Gold-mining processing operation */
+.investors-page-hero {
+  background-image:
+    linear-gradient(
+      rgba(12, 15, 13, 0.45),
+      rgba(12, 15, 13, 0.65)
+    ),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise_Dam_Gold_Mine_processing_plant_22.jpg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* GOLDPEAK — MINING IMAGE UPDATES */
+
+/* Home: original open-pit mining discovery image */
+.hero-image {
+  background-image: url("https://image.chitra.live/api/v1/wps/99cb65a/bb9a2310-cc20-4960-9d94-f358e49c1404/8/Black-Cat-Myhree-Boundarypits-1074x654.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* About Us: mining exploration */
+.about-approach-image {
+  background-image: url("https://image.chitra.live/api/v1/wps/99cb65a/bb9a2310-cc20-4960-9d94-f358e49c1404/8/Black-Cat-Myhree-Boundarypits-1074x654.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-visual-image {
+  background-image: url("https://image.chitra.live/api/v1/wps/f05b081/8754f93c-9571-424e-b9fc-9d9605cf2a79/2/Perseus-Edikan-pit-1074x654.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Project card 1: Exploration & Discovery */
+.exploration-image {
+  background-image: url("https://image.chitra.live/api/v1/wps/99cb65a/bb9a2310-cc20-4960-9d94-f358e49c1404/8/Black-Cat-Myhree-Boundarypits-1074x654.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Project card 2: Development */
+.development-image {
+  background-image: url("https://image.chitra.live/api/v1/wps/f05b081/8754f93c-9571-424e-b9fc-9d9605cf2a79/2/Perseus-Edikan-pit-1074x654.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Project card 3: Responsible Mining */
+.responsible-image {
+  background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Bosomtwe_Land_reclamation_site.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* OUR PROJECTS — MINERAL DISCOVERY HERO */
+.projects-page-hero {
+  background-image:
+    linear-gradient(
+      rgba(12, 15, 13, 0.30),
+      rgba(12, 15, 13, 0.55)
+    ),
+    url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* =========================================
+   GOLDPEAK CORPORATION
+   HOME HERO SLIDESHOW
+   ========================================= */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hero-slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-color: #171916;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transform: scale(1.04);
+  transition:
+    opacity 1.4s ease-in-out,
+    transform 6s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(12, 15, 13, 0.90) 0%,
+    rgba(12, 15, 13, 0.68) 45%,
+    rgba(12, 15, 13, 0.28) 100%
+  );
+  pointer-events: none;
+}
+
+.hero-content,
+.hero-side-label {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide {
+    transition: none;
+    transform: none;
   }
 }

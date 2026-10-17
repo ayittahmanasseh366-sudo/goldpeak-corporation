@@ -1,10 +1,42 @@
+
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+
+const miningPhotos = [
+  "https://d2mef2yp6u2brg.cloudfront.net/wysiwyg/Mineria02.webp",
+  "https://fimex.com.mx/_next/image?q=85&url=%2Ffimex-assets%2FIndustries%2Fmining.webp&w=1920",
+  "https://media-prod.ii.co.uk/s3fs-public/2024-09/mining_truck_600.jpg",
+];
+
+
 function Home() {
+  const [activePhoto, setActivePhoto] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActivePhoto((current) => (current + 1) % miningPhotos.length);
+    }, 5000);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
   return (
     <>
+      {/* HERO SECTION */}
       <section className="hero" id="home">
-        <div className="hero-image" />
+        <div className="hero-slideshow" aria-hidden="true">
+          {miningPhotos.map((photo, index) => (
+            <div
+              key={photo}
+              className={`hero-slide ${
+                activePhoto === index ? "active" : ""
+              }`}
+              style={{ backgroundImage: `url("${photo}")` }}
+            />
+          ))}
+        </div>
+
         <div className="hero-shade" />
 
         <div className="hero-content">
@@ -38,17 +70,20 @@ function Home() {
           </div>
 
           <div className="hero-caption">
-            <span className="caption-number">01 / 04</span>
+            <span className="caption-number">
+              0{activePhoto + 1} / 03
+            </span>
             <span className="caption-line" />
             <span>THE NEXT CHAPTER STARTS HERE</span>
           </div>
         </div>
 
         <div className="hero-side-label">
-          GOLDPEAK CORPORATION · MINING & DEVELOPMENT
+          GOLDPEAK CORPORATION · MINING &amp; DEVELOPMENT
         </div>
       </section>
 
+      {/* INTRODUCTION */}
       <section className="intro section-padding">
         <div className="intro-label">
           <span className="section-number">01</span>
@@ -84,6 +119,7 @@ function Home() {
         </div>
       </section>
 
+      {/* VISION */}
       <section className="vision-strip">
         <div className="vision-image" />
 
@@ -111,6 +147,7 @@ function Home() {
         </div>
       </section>
 
+      {/* PROJECT PRIORITIES */}
       <section className="projects section-padding">
         <div className="section-heading">
           <div>
@@ -202,6 +239,7 @@ function Home() {
         </div>
       </section>
 
+      {/* OUR APPROACH */}
       <section className="approach section-padding">
         <div className="approach-heading">
           <div className="eyebrow">
@@ -246,6 +284,7 @@ function Home() {
         </div>
       </section>
 
+      {/* SUSTAINABILITY */}
       <section className="sustainability home-sustainability">
         <div className="sustainability-image" />
 
@@ -273,6 +312,7 @@ function Home() {
         </div>
       </section>
 
+      {/* INVESTOR RELATIONS */}
       <section className="investors section-padding">
         <div className="investor-decoration">G</div>
 
@@ -310,6 +350,7 @@ function Home() {
         </div>
       </section>
 
+      {/* CONTACT */}
       <section className="contact home-contact section-padding">
         <div className="contact-heading">
           <div className="eyebrow">
